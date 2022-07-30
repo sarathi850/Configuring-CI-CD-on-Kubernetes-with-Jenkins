@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: sarathi850/first:9
+        image: sarathi850/class:${env.BUILD_NUMBER}
         imagePullPolicy: Always
         ports:
         - containerPort: 4444
