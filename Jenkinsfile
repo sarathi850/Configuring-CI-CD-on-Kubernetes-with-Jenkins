@@ -6,11 +6,6 @@ pipeline {
         sh "docker build -t sarathi850/first:${env.BUILD_NUMBER} ."
       }
     }
-    stage('Docker Remove Image') {
-      steps {
-        sh "docker rmi sarathi850/first:${env.BUILD_NUMBER}"
-      }
-    }
     stage('Apply Kubernetes Files') {
       steps {
           withKubeConfig([credentialsId: 'KUBERNETES_CLUSTER_CONFIG']) {
