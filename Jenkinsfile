@@ -14,7 +14,6 @@ pipeline {
           sh "docker push sarathi850/first:${env.BUILD_NUMBER}"
         }
       }
-    }
     stage('Docker Remove Image') {
       steps {
         sh "docker rmi sarathi850/first:${env.BUILD_NUMBER}"
