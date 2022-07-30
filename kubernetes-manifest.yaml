@@ -35,7 +35,7 @@ spec:
       - name: helloworld
         ports:
         - containerPort: 9094
-        image: {{PULL_IMAGE}}
+        image: sarathi850/helloworld
         imagePullPolicy: IfNotPresent
         resources:
           limits:
@@ -44,5 +44,4 @@ spec:
           requests:
             cpu: 50m
             memory: 64Mi
-      imagePullSecrets:
-      - name: {{PULL_SECRET}}
+     
