@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: kmlaydin/podinfo:{{BUILD_NUMBER}}
+        image: sarathi850/first:9
         imagePullPolicy: Always
         ports:
         - containerPort: 4444
