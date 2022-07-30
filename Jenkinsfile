@@ -7,7 +7,7 @@ pipeline {
     // some block
 }
          
-          sh 'kubectl apply -f kubernetes-manifest.yaml'
+          sh 'kubectl create -f https://k8s.io/examples/application/deployment.yaml'
   }
     }
 }
