@@ -22,7 +22,7 @@ pipeline {
         withCredentials([kubeconfigFile(credentialsId: 'KUBERNETES_CLUSTER_CONFIG', variable: 'KUBECONFIG')]) {
     // some block
 }
-          sh 'kubectl apply -f deployment.yaml'
+         
           sh 'kubectl apply -f service.yaml'
   }
   }
