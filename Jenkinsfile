@@ -6,14 +6,6 @@ pipeline {
         sh "docker build -t sarathi850/first:${env.BUILD_NUMBER} ."
       }
     }
-    stage('Docker Push') {
-      steps {
-        withCredentials([string(credentialsId: 'DOCKER_HUB', variable: 'DOCKER_HUB')]) {
-         // some block
-         }
-          sh "docker push sarathi850/first:${env.BUILD_NUMBER}"
-        }
-      }
     stage('Docker Remove Image') {
       steps {
         sh "docker rmi sarathi850/first:${env.BUILD_NUMBER}"
